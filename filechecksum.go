@@ -1,4 +1,4 @@
-package main
+package filechecksum
 
 import (
    "crypto/md5"
@@ -31,14 +31,4 @@ func(md *MD5) FileMD5(filename string) (string, error) {
 func NewMD5CheckSum()(*MD5) {
    return &MD5 {
    }
-}
-
-func main() {
-   file := "test.txt"
-
-   m := NewMD5CheckSum()
- 
-   Val1, _ := m.FileMD5(file)
- 
-   fmt.Printf("%s\n", Val1)
 }
